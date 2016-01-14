@@ -1,0 +1,8 @@
+notes.txt
+=========
+
+
+todo:
+- make let first character search for random synonym
+- make it nice on mobile
+- make it nice

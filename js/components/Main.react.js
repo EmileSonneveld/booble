@@ -3,7 +3,8 @@
  * the DataStore and passes the new data to its children.
  */
 
-const Counter = require('./Counter.react');
+const SearchBar = require('./SearchBar.react');
+const DisplayResult = require('./DisplayResult.react');
 const DataStore = require('../stores/DataStore');
 
 global.jQuery = require('jquery');
@@ -35,9 +36,38 @@ const Main = React.createClass({
 
   render: function() {
 
+    const schrodingerResult = this.state.dataStoreData.showResult ?
+      (<DisplayResult imgageUrl={this.state.dataStoreData.imgageUrl}/>)
+      : null;
+
     return (
-      <div className="container-flex col-md-12">
-        <Counter countValue={this.state.dataStoreData.countValue}/>
+      <div className="container-flex">
+        <div className="col-md-2">
+        </div>
+        <div className="col-md-8">
+          <div className="jumbotron text-center">
+            <h1>Booble!</h1>
+            <p>The most efficient search engine around</p>
+          </div>
+
+          <div className="row">
+            <div className="col-md-4">
+            </div>
+            <div className="col-md-4">
+
+              <SearchBar inputValue={this.state.dataStoreData.inputValue}/>
+
+            </div>
+            <div className="col-md-4">
+            </div>
+          </div>
+
+          <div className="text-center">
+
+            {schrodingerResult}
+
+          </div>
+        </div>
       </div>
     );
   },

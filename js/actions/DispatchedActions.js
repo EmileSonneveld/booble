@@ -14,10 +14,24 @@ const MessageConstants = require('../constants/MessageConstants');
 
 const DispatchedActions = {
 
-  addToValue: function(extraValue) {
+  setRandomLink: function(extraValue) {
     AppDispatcher.dispatch({
-      actionType: MessageConstants.INCREASE_COUNT_VALUE,
+      actionType: MessageConstants.SET_RANDOM_LINK,
       extraValue: extraValue,
+    });
+  },
+
+  setInputValue: function(newInputValue) {
+    AppDispatcher.dispatch({
+      actionType: MessageConstants.SET_INPUT_VALUE,
+      newInputValue: newInputValue,
+    });
+  },
+
+  setShowResult: function(bShowResult) {
+    AppDispatcher.dispatch({
+      actionType: MessageConstants.SET_DISPLAY_RESULT,
+      showResult: bShowResult,
     });
   },
 

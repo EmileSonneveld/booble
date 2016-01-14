@@ -11,5 +11,7 @@
 const keyMirror = require('keymirror');
 
 module.exports = keyMirror({
-  INCREASE_COUNT_VALUE: null,
+  SET_RANDOM_LINK: null,
+  SET_INPUT_VALUE: null,
+  SET_DISPLAY_RESULT: null,
 });

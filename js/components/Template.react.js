@@ -1,7 +1,5 @@
 const React = require('react');
 
-const Main = require('./Main.react');
-
 
 const Template = React.createClass({
 
